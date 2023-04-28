@@ -24,12 +24,24 @@ dice.innerText = '0'
 player1RoundScore.innerText = '0'
 player2RoundScore.innerText = '0'
 
-let currentPlayer = document.querySelector('.player.current')
+const current = document.querySelector('.current')
+let currentPlayer = document.createElement('div')
+currentPlayer.classList.add('active')
+currentPlayer.classList.add('bg-danger')
+current.append(currentPlayer)
+console.log(currentPlayer)
+
 
 const switchPlayer = () => {
   player1Container.classList.toggle('current')
   player2Container.classList.toggle('current')
-  // player1Container.classList.contains('current') ? player1Container.style.background = 'red' : player2Container.style.background = 'red'
+  if (player1Container.classList.contains('current')) {
+    player1Container.append(currentPlayer)
+    currentPlayer.style.setProperty('transform', 'translateX(100px')
+  } else {
+    player2Container.append(currentPlayer)
+    currentPlayer.style.setProperty('transform', 'translateX(-100px')
+  }
 }
 
 
@@ -38,7 +50,7 @@ const roll = () => { // dice roll
   let currentRoll = Math.floor(Math.random() * 6 + 1)
   dice.innerText = currentRoll
   if (currentRoll === 1) {
-    player1RoundScore.innerText = 0
+    player1RoundScore.innerText = 
     player2RoundScore.innerText = 0
     switchPlayer()
   } else {
@@ -46,12 +58,6 @@ const roll = () => { // dice roll
   }
 }
 const reset = () => {
-  // player1GlobalScore.innerText = 0
-  // player1RoundScore.innerText = 0
-  // player2GlobalScore.innerText = 0
-  // player2RoundScore.innerText = 0
-  // rollDice.disabled = false
-  // hold.disabled = false
   document.location.reload() // reload page
 }
 
@@ -64,11 +70,11 @@ const save = () => {
     player1RoundScore.innerText = 0
     player2RoundScore.innerText = 0    
     dice.innerText = 0
-    if (Number(player1GlobalScore.innerText) > 9) {
+    if (Number(player1GlobalScore.innerText) > 99) {
       player1Container.firstElementChild.innerText += `WINNER`
       rollDice.disabled = true
       hold.disabled = true
-    } else if(Number(player2GlobalScore.innerText) > 9) {
+    } else if(Number(player2GlobalScore.innerText) > 99) {
       player2Container.firstElementChild.innerText += `WINNER`
       rollDice.disabled = true
       hold.disabled = true
@@ -78,8 +84,6 @@ const save = () => {
   }
   
 }
-
-
 
 rollDice.addEventListener('click', roll)
 newGame.addEventListener('click', reset)

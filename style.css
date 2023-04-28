@@ -1,3 +1,33 @@
 .current {
-  background-color: red;
+  background: lightgray;
+  position: relative;
+}
+
+.active {
+  display: block;
+  width: 15px !important;
+  height: 15px !important;
+  border-radius: 50%;
+  background-color: blue;
+  position: absolute;
+  top: 130px;
+  transform: translateX(100px);
+}
+
+.bg-danger {
+  width: 100px;
+  text-transform: uppercase;
+}
+
+.text-danger {
+  font-size: 7rem;
+}
+
+#dice {
+  font-size: 10rem;
+  text-align: center;
+}
+
+body {
+  height: 100vh !important;
 }/*# sourceMappingURL=style.css.map */
