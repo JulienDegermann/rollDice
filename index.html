@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- fonts -->
+
+  <!-- style -->
+  <link rel="stylesheet" href="style.css">
+
+  <title>Roll Dice Game</title>
+</head>
+
+<body>
+  <main>
+
+    <section class="gameSetting">
+      <button id="newGame">new game</button>
+
+
+      <div id="dice"></div>
+      <!-- <canvas class="dice">
+        Your browser does not support canvas
+      </canvas> -->
+
+      <button id="rollDice">roll dice</button>
+      <button id="hold">hold</button>
+    </section>
+
+    <section class="player">
+
+      <article class="player current" id="player1">
+        <h2>player 1</h2>
+        <p>Global : <span class="reset" id="globalScore1">0</span> </p>
+        <p>Current : <span class="reset" id="roundScore1">0</span></p>
+      </article>
+
+      <article class="player" id="player2">
+        <h2>player 2</h2>
+        <p>Global : <span class="reset" id="globalScore2">0</span> </p>
+        <p>Current : <span class="reset" id="roundScore2">0</span></p>
+
+      </article>
+    </section>
+  </main>
+
+
+
+
+
+  <script src="main.js"></script>
+</body>
+
+</html>
