@@ -42,12 +42,12 @@ const switchPlayer = () => {
   player2Container.classList.toggle('current')
   if (player1Container.classList.contains('current')) {
     document.querySelector('.current').firstElementChild.appendChild(currentPlayer)
-    currentPlayer.style.removeProperty('left', '-20px')
-    currentPlayer.style.setProperty('right', '-20px')
+    currentPlayer.style.removeProperty('left', '-40px')
+    currentPlayer.style.setProperty('right', '-40px')
   } else {
     document.querySelector('.current').firstElementChild.appendChild(currentPlayer)
-    currentPlayer.style.removeProperty('right', '-20px')
-    currentPlayer.style.setProperty('left', '-20px')  }
+    currentPlayer.style.removeProperty('right', '-40px')
+    currentPlayer.style.setProperty('left', '-40px')  }
 }
 
 const roll = () => { // dice roll
