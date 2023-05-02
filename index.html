@@ -16,13 +16,27 @@
 </head>
 
 <body class="w-100">
+
+
+
   <main class="w-100 h-100">
 
-    <section
-      class="gameSetting position-absolute top-0 start-50 translate-middle-x d-flex flex-column h-100 justify-content-around z-3">
+    <section class="
+        gameSetting 
+        position-absolute
+        top-0
+        start-50 
+        translate-middle-x 
+        d-flex 
+        flex-lg-column 
+        h-100
+        w-100
+        justify-content-evenly
+        p-6
+        z-3">
 
       <!-- newGame button -->
-      <button id="newGame" class="border border-0 bg-transparent">
+      <button id="newGame" class="border border-0 bg-transparent py-5 my-5">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
           class="bi bi-plus-circle text-danger" viewBox="0 0 16 16">
           <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
@@ -32,15 +46,13 @@
         NEW GAME</button>
 
 
-      <div id="dice" class="text-dark"></div>
-      <!-- <canvas class="dice">
-        Your browser does not support canvas
-      </canvas> -->
+      <!-- <div id="dice" class="text-dark"></div> -->
+      <div id="dice" class="text-danger">
+      </div>
 
-
-      <div class="d-flex flex-column h-50 justify-content-center">
+      <div class="d-flex h-100 flex-column justify-content-center">
         <!-- rollDice button -->
-        <button class="my-5 border border-0 bg-transparent
+        <button class="my-2 my-lg-5 border border-0 bg-transparent
         " id="rollDice">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
             class="bi bi-arrow-repeat text-danger" viewBox="0 0 16 16">
@@ -53,7 +65,7 @@
         </button>
 
         <!-- holdScore button -->
-        <button class="my-5 border border-0 bg-transparent
+        <button class="my-2 my-lg-5 border border-0 bg-transparent
         " id="hold">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
             class="bi bi-box-arrow-in-down text-danger" viewBox="0 0 16 16">
@@ -64,20 +76,28 @@
           </svg>
           HOLD
         </button>
-
       </div>
     </section>
 
-    <section class="player d-flex w-100 h-100">
-      <!-- 
-      <article class="player w-50 d-flex flex-column align-items-center current" id="player1">
-        <h2>PLAYER 1</h2>
-        <p><span class="reset" id="globalScore1">0</span> </p>
-        <p class="bg-danger">Current : <span class="reset text-white" id="roundScore1">0</span></p>
-      </article> -->
+    <section class="
+      player
+      d-flex
+      flex-column
+      flex-lg-row
+      h-100
+      w-100">
 
-      <article class="player h-100 w-50 d-flex flex-column align-items-center justify-content-evenly current" id="player1">
-        <div class="d-flex flex-column align-items-center">
+      <article class="
+        player
+        d-flex
+        col-12
+        col-lg-6
+        py-5
+        flex-column
+        align-items-center
+        justify-content-evenly
+        current" id="player1">
+        <div class="d-flex flex-column align-items-center position-relative">
           <h2>PLAYER 1</h2>
           <p class="reset text-danger" id="globalScore1">0</p>
         </div>
@@ -85,22 +105,25 @@
             class="fs-1 reset text-white" id="roundScore1">0</span></p>
       </article>
 
-
-
-      <article class="player h-100 w-50 d-flex flex-column align-items-center justify-content-evenly" id="player2">
-        <div class="d-flex flex-column align-items-center">
+      <article class="
+        player 
+        d-flex 
+        col-12
+        col-lg-6
+        py-5
+        flex-column 
+        align-items-center
+        justify-content-evenly" id="player2">
+        <div class="d-flex flex-column align-items-center position-relative">
           <h2>PLAYER 2</h2>
           <p class="reset text-danger" id="globalScore2">0</p>
         </div>
         <p class="bg-danger text-center p-2 d-flex flex-column justify-content-around">Current <span
-            class="fs-1 reset text-white" id="roundScore2">0</span></p>
+            class="fs-1 reset text-white" id="roundScore2">0 </span></p>
       </article>
+
     </section>
   </main>
-
-
-
-
 
   <script src="main.js"></script>
 </body>
