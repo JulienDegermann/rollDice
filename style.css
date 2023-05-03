@@ -4,11 +4,29 @@
 
 body {
   height: 100vh !important;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+}
+
+article.player {
+  height: 50% !important;
+}
+@media screen and (min-width: 992px) {
+  article.player {
+    height: 100% !important;
+  }
+}
+article.player h2 {
+  font-weight: 100;
 }
 
 .current {
   background: lightgray;
   position: relative;
+}
+.current h2 {
+  color: black;
+  font-weight: 400;
 }
 
 .active {
@@ -23,7 +41,7 @@ body {
 }
 
 .bg-danger {
-  width: 100px;
+  width: 150px;
   text-transform: uppercase;
 }
 
@@ -47,15 +65,6 @@ body {
     top: 20%;
     left: 50%;
     transform: translate(-50%, 0);
-  }
-}
-
-article.player {
-  height: 50% !important;
-}
-@media screen and (min-width: 992px) {
-  article.player {
-    height: 100% !important;
   }
 }
 
